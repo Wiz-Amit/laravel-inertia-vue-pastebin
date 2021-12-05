@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,6 @@ Route::get('/', function () {
     return Inertia::render('Home', [
         'name' => 'Amit',
     ]);
-});
+})->name('home');
+
+Route::resource('posts', PostController::class);
