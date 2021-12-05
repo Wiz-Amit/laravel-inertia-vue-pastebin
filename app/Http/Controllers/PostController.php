@@ -31,7 +31,7 @@ class PostController extends Controller
 
         $request->session()->flash("success", "Content #{$post->id} has been stored");
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.show', $post->id);
     }
 
     public function show(Request $request, Post $post)

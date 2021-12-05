@@ -18,7 +18,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return Inertia::render('Home', [
-        'posts' => Post::query()->paginate(),
+        'posts' => Post::query()->latest()->paginate(),
     ]);
 })->name('home');
 

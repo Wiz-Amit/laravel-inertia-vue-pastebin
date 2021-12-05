@@ -1,24 +1,14 @@
 <template>
-  <section class="flex">
-    <div id="posts" class="my-5">
-      <h2 class="text-2xl text-black mb-3">Posts</h2>
-      <ul class="grid grid-cols-4 gap-3">
-        <li class="border p-3 rounded shadow" v-for="post in posts.data" :key="post.id">
-          {{ post.content.substr(0, 140) }}
-          <Link
-            :href="'/posts/' + post.id"
-            prefetch
-            target="_blank"
-            v-if="post.content.length > 140"
-            >... <br />(Read more)</Link
-          >
-        </li>
-      </ul>
-    </div>
+  <section class="">
+    <Create />
+    <Index :posts="posts" />
   </section>
 </template>
 
 <script setup>
+import Create from "./Posts/Create.vue";
+import Index from "./Posts/Index.vue";
+
 defineProps({
   posts: Object,
 });
