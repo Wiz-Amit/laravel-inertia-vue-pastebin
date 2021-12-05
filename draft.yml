@@ -1,0 +1,8 @@
+models:
+  Post:
+    content: text
+    timestamps: true
+
+controllers:
+  Post:
+    Resource

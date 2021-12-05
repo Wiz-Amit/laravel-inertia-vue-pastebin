@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Post;
+use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return Inertia::render('Home', [
+        'posts' => Post::query()->latest()->paginate(),
+    ]);
+})->name('home');
+
+Route::resource('posts', PostController::class);
