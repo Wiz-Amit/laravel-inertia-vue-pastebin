@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\PostStoreRequest;
 use App\Http\Requests\PostUpdateRequest;
 use Illuminate\Support\Facades\Redirect;
+use Inertia\Inertia;
 
 class PostController extends Controller
 {
@@ -35,7 +36,9 @@ class PostController extends Controller
 
     public function show(Request $request, Post $post)
     {
-        return view('posts.show', compact('post'));
+        return Inertia::render('Posts/Show', [
+            'post' => $post,
+        ]);
     }
 
     public function edit(Request $request, Post $post)

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -17,7 +18,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return Inertia::render('Home', [
-        'name' => 'Amit',
+        'posts' => Post::query()->paginate(),
     ]);
 })->name('home');
 

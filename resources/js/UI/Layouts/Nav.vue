@@ -16,41 +16,41 @@
             clip-rule="evenodd"
           />
         </svg>
-        <a
-          href="#"
+        <Link
+          href="/"
           class="font-bold text-xl focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg"
-          >{{ app?.name }}</a
+          >{{ app?.name }}</Link
         >
       </section>
 
       <section>
         <ul class="md:space-x-8 space-x-6 text-gray-900 font-semibold hidden md:flex">
           <li class="relative group">
-            <a
-              href="#"
+            <Link
+              href="/"
               class="group focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg"
             >
               Home
-            </a>
+            </Link>
             <div
               class="w-full h-0.5 bg-transparent group-hover:bg-purple-500 transition-al absolute bottom-0"
             />
           </li>
           <li class="relative group">
-            <a
-              href="#"
+            <Link
+              href="/"
               class="focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg"
-              >Notes</a
+              >Notes</Link
             >
             <div
               class="w-full h-0.5 bg-transparent group-hover:bg-purple-500 transition-al absolute bottom-0"
             />
           </li>
           <li class="relative group">
-            <a
+            <Link
               href="#"
               class="focus:ring focus:ring-purple-500 focus:ring-opacity-25 outline-none rounded-lg"
-              >About</a
+              >About</Link
             >
             <div
               class="w-full h-0.5 bg-transparent group-hover:bg-purple-500 transition-al absolute bottom-0"
